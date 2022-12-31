@@ -57,6 +57,8 @@ public class SOSGameContext
 
         for (int x = currentBoxIndex; x < (currentBoxIndex + 3); x++)
         {
+            //in case the current word index is heigher than the size of the list of possitions 
+            //return the current string to check for sos
             if (x > possibleSOS.Count - 1) return strPossibleSOS.ToString();
 
             if (possibleSOS[x] == null || possibleSOS[x].Letter == char.MinValue)
@@ -65,7 +67,8 @@ public class SOSGameContext
                 continue;
             }
 
-            char? lastLetter = strPossibleSOS.Length == 0 ? char.MinValue :
+            char? lastLetter = strPossibleSOS.Length == 0 
+                ? char.MinValue :
                 strPossibleSOS[strPossibleSOS.Length - 1];
 
             if (lastLetter == null || lastLetter.Equals(possibleSOS[x].Letter))
