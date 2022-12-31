@@ -6,6 +6,7 @@ public class SOSGameContext
 {
     private readonly IGameConfigurationEntity _sOSGameConfigurations;
     private BoxEntity[] _possitions;
+    private readonly int _numberOfBoxes;
     private const string WINCOMBINATION = "SOS";
 
     private SOSGameContext() { }
@@ -13,7 +14,8 @@ public class SOSGameContext
     public SOSGameContext(IGameConfigurationEntity configurationEntity)
     {
         _sOSGameConfigurations = configurationEntity;
-        _possitions = new BoxEntity[_sOSGameConfigurations.GameNumberOfBoxes];
+        _numberOfBoxes= _sOSGameConfigurations.GameNumberOfBoxes;
+        _possitions = new BoxEntity[_numberOfBoxes];
     }
 
     public bool Play(BoxEntity boxEntity)
@@ -55,7 +57,7 @@ public class SOSGameContext
 
         for (int x = currentBoxIndex; x < (currentBoxIndex + 3); x++)
         {
-            if (x > possibleSOS.Count - 1) return string.Empty;
+            if (x > possibleSOS.Count - 1) return strPossibleSOS.ToString();
 
             if (possibleSOS[x] == null || possibleSOS[x].Letter == char.MinValue)
             {
