@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SOSGame.Controls.Pages.PlayingPage"
+             xmlns:viewmodels="clr-namespace:SOSGame.MVVM"
+             xmlns:customControls="clr-namespace:SOSGame.Controls.Custom"
+             x:DataType="viewmodels:PlayingPageViewModel"
+             BackgroundColor="{StaticResource PlayingPageBackground}"
+             Title="PlayingPage">
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <Frame Padding="1" Margin="5, 30, 5, 0" HorizontalOptions="Center" BackgroundColor="{StaticResource SuperMarioButtonColor}">
+            <Frame.Shadow>
+                <Shadow Offset="0, 3" Brush="#1D293B" Radius="10" />
+            </Frame.Shadow>
+            <HorizontalStackLayout Padding="0">
+                <Button Text="How to Play?" TextColor="White" Padding="10" Command="{Binding HowToPlayCommand}">
+                </Button>
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame CornerRadius="5" Margin="50, 20, 50, 20" HorizontalOptions="Center" Padding="3" BackgroundColor="{StaticResource PlayingPageBackground}">
+            <Frame.Shadow>
+                <Shadow  Offset="5, 5" Radius="10" Brush="{StaticResource PlayingPageBackground}" />
+            </Frame.Shadow>
+            <HorizontalStackLayout  x:Name="BoxContainer" />
+        </Frame>
+        <customControls:LetterChooser x:Name="LetterChooserContainer"/>
+    </StackLayout>
+
+</ContentPage>

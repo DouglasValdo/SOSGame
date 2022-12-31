@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="SuperMarioPrimaryColor">#101828</Color>
+    
+    <Color x:Key="SuperMarioButtonStartGameColor">#FB8552</Color>
+    <Color x:Key="SuperMarioShadowStartGameColor">#E45520</Color>
+    <Color x:Key="SuperMarioButtonColor">#5BB1FF</Color>
+    <Color x:Key="SuperMarioShadowButtonColor">#2B54B2</Color>
+
+    <Color x:Key="MainPageBackground">#448CF6</Color>
+    <Color x:Key="PlayingPageBackground">#101828</Color>
+    
+    <Color x:Key="SelectedBoxButtonColor">#61C6FF</Color>
+    <Color x:Key="SelectedBoxButtonTextColor">#DFF4FF</Color>
+    <Color x:Key="BoxButtonColor">#19202C</Color>
+    
+    <Color x:Key="ButtonTextColor">#909292</Color>
+    <Color x:Key="MainButtonTextColor">#4EAAFB</Color>
+    <Color x:Key="MainButtonColor">White</Color>
+    <Color x:Key="MainButtonShadowColor">#67BCFE</Color> 
+</ResourceDictionary>

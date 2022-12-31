@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:SOSGame.MVVM"
+             x:DataType="viewmodels:BoxRepresentationViewModel"
+             x:Class="SOSGame.Controls.Custom.BoxRepresentation" >
+    <HorizontalStackLayout BackgroundColor="{StaticResource PlayingPageBackground}">
+        <Border StrokeThickness="2" BackgroundColor="{StaticResource PlayingPageBackground}" 
+                WidthRequest="83.33" HeightRequest="100" Padding="0" Margin="0">
+            <Button FontSize="Medium" Text="{Binding SelectedText}" 
+                    Margin="0" Padding="0" Command="{Binding BoxButtonCommand}" IsEnabled="{Binding IsEnabled}">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"  Value="{StaticResource BoxButtonColor}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"  Value="{StaticResource SelectedBoxButtonColor}" />
+                                <Setter Property="TextColor"        Value="{StaticResource SelectedBoxButtonTextColor}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+        </Border>
+    </HorizontalStackLayout>
+</ContentView>

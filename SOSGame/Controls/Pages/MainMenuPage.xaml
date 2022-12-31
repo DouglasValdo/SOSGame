@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SOSGame.Controls.Pages.MainMenuPage"
+             xmlns:viewmodels="clr-namespace:SOSGame.MVVM"
+             x:DataType="viewmodels:MainMenuPageViewModel"
+             Background="{StaticResource SuperMarioPrimaryColor}"
+             Title="MainMenuPage">
+    <VerticalStackLayout Margin="50" >
+        <StackLayout>
+            <HorizontalStackLayout  HorizontalOptions="Center">
+                <Button  Text="S" Style="{StaticResource SuperMarioMainButtonStyle}" WidthRequest="75" HeightRequest="100"
+                         FontSize="Large">
+                    <Button.Shadow>
+                        <Shadow  Offset="0, 10" Radius="2" Brush="{StaticResource SuperMarioShadowButtonColor}" />
+                    </Button.Shadow>
+                </Button>
+                <Button  Text="O" Style="{StaticResource SuperMarioMainButtonStyle}" WidthRequest="75" HeightRequest="100"
+                         FontSize="Large">
+                    <Button.Shadow>
+                        <Shadow  Offset="0, 10" Radius="2" Brush="{StaticResource SuperMarioShadowButtonColor}" />
+                    </Button.Shadow>
+                </Button>
+                <Button  Text="S" Style="{StaticResource SuperMarioMainButtonStyle}" WidthRequest="75" HeightRequest="100"
+                         FontSize="Large">
+                    <Button.Shadow>
+                        <Shadow  Offset="0, 10" Radius="2" Brush="{StaticResource SuperMarioShadowButtonColor}" />
+                    </Button.Shadow>
+                </Button>
+            </HorizontalStackLayout>
+        </StackLayout>
+        <StackLayout Margin="0, 30, 0, 0">
+            <Button  Text="New Game" Command="{Binding PlayCommand}" Style="{StaticResource SuperMarioMainButtonStyle}"
+                 BackgroundColor="{StaticResource SuperMarioButtonStartGameColor}">
+                <Button.Shadow>
+                    <Shadow  Offset="0, 6" Radius="2" Brush="{StaticResource SuperMarioShadowStartGameColor}" />
+                </Button.Shadow>
+            </Button>
+            <!--<Button  Text="Score" Style="{StaticResource SuperMarioMainButtonStyle}">
+                <Button.Shadow>
+                    <Shadow  Offset="0, 6" Radius="2" Brush="{StaticResource SuperMarioShadowButtonColor}" />
+                </Button.Shadow>
+            </Button>-->
+            <Button  Text="Settings" Style="{StaticResource SuperMarioMainButtonStyle}">
+                <Button.Shadow>
+                    <Shadow  Offset="0, 6" Radius="2" Brush="{StaticResource SuperMarioShadowButtonColor}" />
+                </Button.Shadow>
+            </Button>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

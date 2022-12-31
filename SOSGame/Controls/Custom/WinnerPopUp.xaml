@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ctk:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctk="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             x:Class="SOSGame.Controls.Custom.WinnerPopUp"
+             xmlns:viewmodels="clr-namespace:SOSGame.MVVM"
+           x:DataType="viewmodels:WinnerPopUpViewModel" CanBeDismissedByTappingOutsideOfPopup="False">
+    <VerticalStackLayout Background="{StaticResource SuperMarioPrimaryColor}" Padding="10" WidthRequest="700" HeightRequest="350">
+
+        <Label Text="🏆 WINNER! 🏆" VerticalOptions="Center" Margin="10" FontSize="Large" FontFamily="Plaguard" HorizontalOptions="Center" />
+        
+        <Image Source="{Binding ImageUrl}" Aspect="AspectFit" WidthRequest="300" HeightRequest="200" IsAnimationPlaying="True"/>
+
+        <Button  Text="🙂 Close 🙂" Style="{StaticResource SuperMarioMainButtonStyle}"
+                 HorizontalOptions="Center" Command="{Binding NewGameCommand}" Margin="10">
+            <Button.Shadow>
+                <Shadow  Offset="0, 6" Radius="2" Brush="{StaticResource SuperMarioShadowButtonColor}" />
+            </Button.Shadow>
+        </Button>
+        
+    </VerticalStackLayout>
+</ctk:Popup>
